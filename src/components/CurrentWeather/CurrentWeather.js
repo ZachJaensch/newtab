@@ -11,13 +11,10 @@ export default function CurrentWeather() {
   const { current: {  main: { temp }, weather: { 0: { description, id}} } } = weather
 
   return (
-    <>
-      <h2>Current weather</h2>
-      <LargeWeather
-        description={description}
-        iconId={id}
-        temp={temp}
-      />
-    </>
+    <LargeWeather
+      description={description}
+      iconId={id}
+      temp={temp}
+    />
   )
 }
