@@ -1,25 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import { WeatherProvider } from './contexts/Weather'
+
+import CurrentWeather from './components/CurrentWeather'
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <WeatherProvider>
+      <div>
+        <h1>
+          This is your new tab
+        </h1>
+        <CurrentWeather/>
+      </div>
+    </WeatherProvider>
+
   );
 }
 
