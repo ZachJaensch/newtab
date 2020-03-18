@@ -26,6 +26,8 @@ export function WeatherProvider({children}) {
     loading
   }
 
+  if(!loading) console.log(value)
+
   return (
     <WeatherContext.Provider value={value}>
       {children}
