@@ -8,13 +8,13 @@ export default function CurrentWeather() {
 
   if(weather.loading) return null
 
-  const { current: {  main: { temp }, weather: { 0: { description, id}} } } = weather
+  const { currently: { temperature, icon, summary } } = weather
 
   return (
     <LargeWeather
-      description={description}
-      iconId={id}
-      temp={temp}
+      description={summary}
+      iconId={icon}
+      temp={temperature}
     />
   )
 }

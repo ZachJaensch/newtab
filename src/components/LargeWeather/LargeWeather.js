@@ -7,13 +7,14 @@ import capitalize from 'capitalize'
 const Display = styled.div`
   display: flex;
   flex-direction: row;
-  padding: ${theme.gutter};
+  margin: ${theme.gutter};
 `
 
 const Icon = styled.span`
   display: flex;
   font-size: 3rem;
-  padding: ${theme.gutter};
+  margin: ${theme.gutter};
+  padding-top: 0.5rem;
 `
 
 const Text = styled.span`

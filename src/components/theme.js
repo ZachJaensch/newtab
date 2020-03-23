@@ -1,5 +1,5 @@
 const theme = {
-  gutter: '16px'
+  gutter: '1rem'
 }
 
 export default theme
