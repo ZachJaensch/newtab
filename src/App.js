@@ -4,6 +4,8 @@ import styled from 'styled-components'
 import { WeatherProvider } from './contexts/Weather'
 
 import CurrentWeather from './components/CurrentWeather'
+import Footer from './components/Footer'
+import Link from './components/Link'
 
 const StyledApp = styled.div`
   font-family: sans-serif;
@@ -27,6 +29,10 @@ function App() {
       <Background />
       <WeatherProvider>
         <CurrentWeather/>
+        <Footer>
+          <Link href="https://github.com/ZachJaensch">GitHub</Link>
+          <Link href="https://facebook.com/ZachJaensch">facebook</Link>
+        </Footer>
       </WeatherProvider>
     </StyledApp>
   );
