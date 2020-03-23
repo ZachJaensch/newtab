@@ -12,7 +12,9 @@ const units = 'si'
 const language = 'en'
 
 const corsAnywhere = 'https://cors-anywhere.herokuapp.com/'
-const darkSkyUrl = `https://api.darksky.net/forecast/${apiKey}/`
+const allowAny = 'https://allow-any-origin.appspot.com/'
+
+const darkSkyUrl = `https://api.darksky.net/forecast/${apiKey}`
 
 
 export function WeatherProvider({children}) {
@@ -23,7 +25,7 @@ export function WeatherProvider({children}) {
   const [alerts, setAlerts] = useState()
   const [loading, setLoading] = useState(true)
 
-  const api = new DarkSkyApi(false, corsAnywhere + darkSkyUrl, units, language);
+  const api = new DarkSkyApi(false, allowAny + darkSkyUrl, units, language);
 
   if(!lastRequestAt) {
     setRequestAt(new Date())
